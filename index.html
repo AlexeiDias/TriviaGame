@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script> src= "./assets/javascript/app.js"</script>
+    <title>Soccer Trivia Game!</title>
+  </head>
+  <body>
+        
+        <div class="card text-center" style="width: 48rem;" >
+        <div class="card-header  ">
+            <h1>Soccer Trivia Game!</h1>
+        </div>
+        <div class="card-body ">
+          <h5 class="card-title">What is the only country 5 times world cup champion?</h5>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input " type="radio" name="question1" id="inlineRadio1" value="option1" data-answer="incorrect">
+            <label class="form-check-label" for="inlineRadio1">1 Italy</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input " type="radio" name="question1" id="inlineRadio2" value="option2" data-answer="incorrect">
+            <label class="form-check-label" for="inlineRadio2">2 China</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question1" id="inlineRadio3" value="option3" data-answer="correct">
+            <label class="form-check-label" for="inlineRadio3">3 Brazil</label>
+          </div>
+          <br>
+          <br>
+          <h5 class="card-title">What time is the Champion's League champion? </h5>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question2" id="inlineRadio1" value="option4" >
+            <label class="form-check-label" for="inlineRadio1">1 Barcelona</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question2" id="inlineRadio2" value="option5" >
+            <label class="form-check-label" for="inlineRadio2">2 Real Madrid</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question2" id="inlineRadio3" value="option6" >
+            <label class="form-check-label" for="inlineRadio3">3 Liverpool</label>
+          </div>
+          <br>
+          <br>
+          <h5 class="card-title">Where was the last World Cup?</h5>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question3" id="inlineRadio1" value="option7" >
+            <label class="form-check-label" for="inlineRadio1">1 France</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question3" id="inlineRadio2" value="option8" >
+            <label class="form-check-label" for="inlineRadio2">2 Spain</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question3" id="inlineRadio3" value="option9" >
+            <label class="form-check-label" for="inlineRadio3">3 Russia</label>
+          </div>
+          <br>
+          <br>
+          <h5 class="card-title">Which country will hold the next World cup?</h5>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question4" id="inlineRadio1" value="option10" >
+            <label class="form-check-label" for="inlineRadio1">1 Argentina</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question4" id="inlineRadio2" value="option11" >
+            <label class="form-check-label" for="inlineRadio2">2 Canada</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question4" id="inlineRadio3" value="option12" >
+            <label class="form-check-label" for="inlineRadio3">3 Katar</label>
+          </div>
+          <br>
+          <br>
+          <h5 class="card-title">Which player is the current golde ball winner? </h5>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question5" id="inlineRadio1" value="option13" >
+            <label class="form-check-label" for="inlineRadio1">1 Messi</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question5" id="inlineRadio2" value="option14" >
+            <label class="form-check-label" for="inlineRadio2">2 Cristiano Ronaldo</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question5" id="inlineRadio3" value="option15" >
+            <label class="form-check-label" for="inlineRadio3">3 Luka Modrić</label>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary ">Submit</a>
+         <div class="card-footer text-muted ">
+         <br>
+        <div id="show-number"></div>
+        <p>time left</p>
+         </div>
+
+      </div>
+
+       <!-- jQuery -->
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+       <!-- Script -->
+       <script type="text/javascript">
+   
+       //  Interval Demonstration
+       //  Set our number counter to 100.
+       var number = 20;
+   
+       //  Variable that will hold our interval ID when we execute
+       //  the "run" function
+       var intervalId;
+
+       // Variable that will hold the right answers
+       var right = 0;
+
+        // Variable that will hold the wrong answers
+        var wrong = 0;
+
+         //onclick function  question 1
+         $(".form-check-input").on("click", function() {
+        // alert("I've been clicked!");
+        var questionValue = $(this).val();
+        console.log(questionValue);
+        if ($(this).attr("data-answer") === "correct") {
+            right++;
+            console.log(right)
+            $(this).attr("data-answer","counted");
+            // $(selector).attr(attribute,value)
+            $("question1").empty();
+
+
+        }
+        
+
+      });
+
+   
+       //  Clearing the intervalId prior to setting our new intervalId will not allow multiple instances.
+       function run() {
+         clearInterval(intervalId);
+         intervalId = setInterval(decrement, 1000);
+       }
+   
+       //  The decrement function.
+       function decrement() {
+   
+         //  Decrease number by one.
+         number--;
+   
+         //  Show the number in the #show-number tag.
+         $("#show-number").html("<h2>" + number + "</h2>");
+
+        
+   
+   
+         //  Once number hits zero...
+         if (number === 0) {
+   
+           //  ...run the stop function.
+           stop();
+   
+           //  Alert the user that time is up.
+           //alert("Time Up!");
+         }
+       }
+   
+       //  The stop function
+       function stop() {
+
+//  Clears our intervalId
+//  We just pass the name of the interval
+//  to the clearInterval function.
+clearInterval(intervalId);
+}
+
+   
+       //  Execute the run function.
+       run();
+   
+       </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script> src= "./assets/javascript/app.js"</script>
+  </body>
+</html>
