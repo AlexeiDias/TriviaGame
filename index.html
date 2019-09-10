@@ -19,31 +19,31 @@
         </div>
         <div class="card-body ">
           <h5 class="card-title">What is the only country 5 times world cup champion?</h5>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input " type="radio" name="question1" id="inlineRadio1" value="option1" data-answer="incorrect">
+          <div class="form-check form-check-inline incorrect1">
+            <input class="form-check-input question1" type="radio" name="question1" id="inlineRadio1" value="option1" >
             <label class="form-check-label" for="inlineRadio1">1 Italy</label>
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input " type="radio" name="question1" id="inlineRadio2" value="option2" data-answer="incorrect">
+          <div class="form-check form-check-inline incorrect1">
+            <input class="form-check-input question1" type="radio" name="question1" id="inlineRadio2" value="option2" >
             <label class="form-check-label" for="inlineRadio2">2 China</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="question1" id="inlineRadio3" value="option3" data-answer="correct">
+            <input class="form-check-input question1" type="radio" name="question1" id="inlineRadio3" value="option3" data-answer="correct1">
             <label class="form-check-label" for="inlineRadio3">3 Brazil</label>
           </div>
           <br>
           <br>
           <h5 class="card-title">What time is the Champion's League champion? </h5>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline incorrect">
             <input class="form-check-input" type="radio" name="question2" id="inlineRadio1" value="option4" >
             <label class="form-check-label" for="inlineRadio1">1 Barcelona</label>
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline incorrect">
             <input class="form-check-input" type="radio" name="question2" id="inlineRadio2" value="option5" >
             <label class="form-check-label" for="inlineRadio2">2 Real Madrid</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="question2" id="inlineRadio3" value="option6" >
+            <input class="form-check-input" type="radio" name="question2" id="inlineRadio3" value="option6" data-answer="correct">
             <label class="form-check-label" for="inlineRadio3">3 Liverpool</label>
           </div>
           <br>
@@ -122,19 +122,19 @@
         var wrong = 0;
 
          //onclick function  question 1
-         $(".form-check-input").on("click", function() {
+         $(".question1").on("click", function() {
         // alert("I've been clicked!");
         var questionValue = $(this).val();
         console.log(questionValue);
-        if ($(this).attr("data-answer") === "correct") {
+        if ($(this).attr("data-answer") === "correct1") {
             right++;
             console.log(right)
-            $(this).attr("data-answer","counted");
-            // $(selector).attr(attribute,value)
-            $("question1").empty();
-
-
+            $(".incorrect1").empty();
         }
+            
+
+
+        
         
 
       });
