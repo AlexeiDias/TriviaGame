@@ -1,10 +1,10 @@
 body {
-    /* background-image: url("../images/futebol.jpg"); */
+    background-image: url("../images/futebol.jpg");
 
 }
 .card {
     margin-left: 25%;
-    margin-top: 2%;
+    margin-top: 7%;
     /* background-image: url("../images/campo.jpg"); */
 
 }
